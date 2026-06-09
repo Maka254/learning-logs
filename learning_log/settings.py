@@ -25,10 +25,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-elkgs&e)n&y&@6su7mp7dj2jw79g=d!lz6ci%e8(2(qpco%*ih'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '.render.com']
+ALLOWED_HOSTS = ['learning-logs-vdgj.onrender.com']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://learning-logs-vdgj.onrender.com',
+]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
